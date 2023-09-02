@@ -7,6 +7,9 @@ import UserIcon from "../icons/user_icon.png";
 import SettingIcon from "../icons/setting_icon.png";
 import GoogleIcon from "../icons/google-icon 1.png";
 import AppleIcon from "../icons/Vector (7).png";
+
+
+
 export const DashBoardIcon = () => {
   return <Image src={DashIcon} alt="dash board" className="object-contain" />;
 };
