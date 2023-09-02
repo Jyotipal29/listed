@@ -20,7 +20,6 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import LineChartContainer from "../component/LineChartContainer";
 import Card from "../component/Card";
-import Cards from "../component/Cards";
 const Dashboard = () => {
   const session = useSession();
   const router = useRouter();

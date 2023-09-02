@@ -3,37 +3,43 @@ import PieChartComp from "./PieChartComp";
 
 const pieChartData = {
   "May - June 2021": [
-    { name: "Basic Tees", value: 550, color: "#98D89E" },
-    { name: "Custom Short Pants", value: 310, color: "#F6DC7D" },
-    { name: "Super Hoodies", value: 140, color: "#EE8484" },
+    { name: "Basic Tees", value: 430, color: "#98D89E" },
+    { name: "Custom Short Pants", value: 270, color: "#F6DC7D" },
+    { name: "Super Hoodies", value: 160, color: "#EE8484" },
   ],
   "June - July 2021": [
-    { name: "Basic Tees", value: 540, color: "#98D89E" },
-    { name: "Custom Short Pants", value: 670, color: "#F6DC7D" },
-    { name: "Super Hoodies", value: 200, color: "#EE8484" },
+    { name: "Sweatshirts", value: 620, color: "#98D89E" },
+    { name: "Track Pants", value: 540, color: "#F6DC7D" },
+    { name: "Beanie Hats", value: 430, color: "#EE8484" },
   ],
 
   "Aug - Sep 2021": [
-    { name: "Sweatshirts", value: 722, color: "#98D89E" },
-    { name: "Track Pants", value: 805, color: "#F6DC7D" },
-    { name: "Beanie Hats", value: 663, color: "#EE8484" },
+    { name: "Graphic T-shirts", value: 380, color: "#98D89E" },
+    { name: "Cargo Shorts", value: 710, color: "#F6DC7D" },
+    { name: "Sports Bras", value: 580, color: "#EE8484" },
   ],
   "Sep - Oct 2021": [
-    { name: "Graphic T-shirts", value: 261, color: "#98D89E" },
-    { name: "Cargo Shorts", value: 879, color: "#F6DC7D" },
-    { name: "Sports Bras", value: 921, color: "#EE8484" },
+    { name: "Sweaters", value: 290, color: "#98D89E" },
+    { name: "Chinos", value: 480, color: "#F6DC7D" },
+    { name: "Ankle Boots", value: 720, color: "#EE8484" },
   ],
   "Oct - Nov 2021": [
-    { name: "Sweaters", value: 189, color: "#98D89E" },
-    { name: "Chinos", value: 456, color: "#F6DC7D" },
-    { name: "Ankle Boots", value: 810, color: "#EE8484" },
+   { name: "Hooded Sweatshirts", value: 520, color: "#98D89E" },
+    { name: "Knit Beanies", value: 360, color: "#F6DC7D" },
+    { name: "Leather Jackets", value: 190, color: "#EE8484" },
   ],
   "Nov - Dec 2021": [
-    { name: "Hooded Sweatshirts", value: 817, color: "#98D89E" },
-    { name: "Knit Beanies", value: 655, color: "#F6DC7D" },
-    { name: "Leather Jackets", value: 258, color: "#EE8484" },
+    { name: "Sweaters", value: 189, color: "#98D89E" },
+     { name: "Chinos", value: 456, color: "#F6DC7D" },
+     { name: "Ankle Boots", value: 810, color: "#EE8484" },
   ],
 };
+
+
+
+// You can use this new dataset as needed in your code.
+
+
 const Card = () => {
   const [month, setMonth] = useState("May - June 2021");
 
