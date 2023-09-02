@@ -18,6 +18,9 @@ import {
 import { signOut } from "next-auth/react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import LineChartContainer from "../component/LineChartContainer";
+import Card from "../component/Card";
+import Cards from "../component/Cards";
 const Dashboard = () => {
   const session = useSession();
   const router = useRouter();
@@ -30,8 +33,8 @@ const Dashboard = () => {
     setNav(!nav);
   };
   return (
-    <div className=" flex bg-[#F5F5F5] h-screen gap-x-8 lg:gap-x-[60px]">
-      <div className="w-[240px] fixed top-0  left-0 z-50 hidden md:block">
+    <div className=" flex   bg-[#F5F5F5] min-h-screen gap-x-2 lg:gap-x-[20px] ">
+      <div className="w-[240px] fixed top-0  left-0 z-50 hidden md:block ">
         <div className="  relative top-[20px]  left-[40px]  bg-black text-white rounded-[30px]  ">
           <div className="h-full flex flex-col ml-12  py-12 ">
             <h1 className="text-4xl font-[700]">Board.</h1>
@@ -126,8 +129,8 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="flex  flex-col w-full md:ml-[250px]">
-        <section className=" container  w-full h-min relative top-[40px] sm:left-[20px] px-10">
+      <div className="   flex  flex-col  w-full md:ml-[250px]">
+        <section className="  w-full h-min relative top-[40px] sm:left-[20px] px-10">
           <nav className="flex justify-between items-center">
             <h2 className="hidden md:block font-[700] text-[24px]">
               Dashboard
@@ -143,7 +146,7 @@ const Dashboard = () => {
                 <path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z" />
               </svg>
             </button>
-            <div className="flex items-center space-x-5">
+            <div className="flex items-center space-x-6">
               <div className="flex items-center   relative ">
                 <input
                   className="outline-none w-40 md:w-[180px]  bg-white h-[30px] rounded-[10px] px-2 text-[14px]"
@@ -170,7 +173,7 @@ const Dashboard = () => {
               </div>
               <div className="flex flex-col flex-wrap">
                 <h2 className="text-[14px]">Total Revenues</h2>
-                <p className="text-[24px] font-[700]">$2,129,430</p>
+                <p className="sm:text-[24px] font-[700]">$2,129,430</p>
               </div>
             </div>
             <div className="bg-[#F4ECDD] rounded-xl px-8 py-4 space-y-4">
@@ -179,7 +182,7 @@ const Dashboard = () => {
               </div>
               <div>
                 <h2 className="text-[14px]">Total Transactions</h2>
-                <p className="text-[24px] font-[700]">1,520</p>
+                <p className="sm:text-[24px] font-[700]">1,520</p>
               </div>
             </div>
             <div className="bg-[#EFDADA] rounded-xl px-8 py-4 space-y-4">
@@ -188,7 +191,7 @@ const Dashboard = () => {
               </div>
               <div>
                 <h2 className="text-[14px]">Total Likes</h2>
-                <p className="text-[24px] font-[700]">9,721</p>
+                <p className="sm:text-[24px] font-[700]">9,721</p>
               </div>
             </div>
             <div className="bg-[#DEE0EF] rounded-xl px-8 py-4 space-y-4">
@@ -197,7 +200,37 @@ const Dashboard = () => {
               </div>
               <div>
                 <h2 className="text-[14px]">Total Users</h2>
-                <p className="text-[24px] font-[700]">892</p>
+                <p className="sm:text-[24px] font-[700]">892</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="mt-32 relative sm:left-[20px] px-10">
+          <LineChartContainer />
+        </div>
+        <div className="mt-16 relative sm:left-[20px] px-10 pb-5 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <Card />
+            <div className="bg-white rounded-[20px] py-[30px] lg:px-[40px] px-8 space-y-[20px]">
+              <div className="flex flex-col space-y-7 ">
+                <div className="flex justify-between items-center">
+                  <h1 className="text-[18px] font-[700]">Today schedule</h1>
+                  <p className="text-[12px]">See All &gt;</p>
+                </div>
+                <div className="border-[#9BDD7C] space-y-[5px]  border-l-[5px] pl-5">
+                  <p className="text-[14px] font-[700]">
+                    Meeting with suppliers from Kuta Bali
+                  </p>
+                  <p className="text-[12px]">14.00-15.00</p>
+                  <p className="text-[12px]">at Sunset Road,Kuta,Bali</p>
+                </div>
+                <div className="border-[#6972C3] space-y-[5px]  border-l-[5px] pl-5">
+                  <p className="text-[14px] font-[700]">
+                    Check operation at Giga Factory 1
+                  </p>
+                  <p className="text-[12px]">18.00-20.00</p>
+                  <p className="text-[12px]">at Central Jakarta</p>
+                </div>
               </div>
             </div>
           </div>
